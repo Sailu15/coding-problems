@@ -1,0 +1,54 @@
+Problem Statement
+Write a program that accepts sets of three numbers, and prints the second-maximum number among the three.
+
+Input
+First line contains the number of triples, N.
+The next N lines which follow each have three space separated integers.
+Output
+For each of the N triples, output one new line which contains the second-maximum integer among the three.
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int n;
+	cin>>n;
+	int a;
+	int b;
+	int c;
+	for(int i=0;i<n;i++){
+	    cin>>a>>b>>c;
+	    if(a>b&&a>c){
+	        if(b>c){
+	            cout<<b<<endl;
+	        }
+	        else{
+	            cout<<c<<endl;
+	        }
+	    }
+	    else if(b>a&&b>c){
+	        if(a>c){
+	            cout<<a<<endl;
+	        }
+	        else{
+	            cout<<c<<endl;
+	        }
+	        
+	           
+	    }
+	    else if(c>a&&c>b){
+	        if(a>b){
+	            cout<<a<<endl;
+	        }
+	        else{
+	            cout<<b<<endl;
+	        }
+	    }
+	    
+	}
+	return 0;
+}
