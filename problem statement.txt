@@ -1,11 +1,27 @@
-Problem Statement
-Write a program that accepts sets of three numbers, and prints the second-maximum number among the three.
+Problem
+Apple considers any iPhone with a battery health of 
+80
+%
+80% or above, to be in optimal condition.
 
-Input
-First line contains the number of triples, N.
-The next N lines which follow each have three space separated integers.
-Output
-For each of the N triples, output one new line which contains the second-maximum integer among the three.
+Given that your iPhone has 
+ 
+%
+X% battery health, find whether it is in optimal condition.
+
+Input Format
+The first line of input will contain a single integer 
+ 
+T, denoting the number of test cases.
+The first and only line of each test case contains an integer 
+ 
+X — the battery health.
+Output Format
+For each test case, output on a new line, YES, if the battery is in optimal condition, and NO otherwise.
+
+You may print each character in uppercase or lowercase. For example, NO, no, No and nO, are all considered identical.
+
+
 
 
 
@@ -15,40 +31,17 @@ using namespace std;
 
 int main() {
 	// your code goes here
-	int n;
-	cin>>n;
-	int a;
-	int b;
-	int c;
-	for(int i=0;i<n;i++){
-	    cin>>a>>b>>c;
-	    if(a>b&&a>c){
-	        if(b>c){
-	            cout<<b<<endl;
-	        }
-	        else{
-	            cout<<c<<endl;
-	        }
+	long long int t;
+	long long int x;
+	cin>>t;
+	for(int i=0;i<t;i++){
+	    cin>>x;
+	    if(x>=80){
+	        cout<<"YES"<<endl;
 	    }
-	    else if(b>a&&b>c){
-	        if(a>c){
-	            cout<<a<<endl;
-	        }
-	        else{
-	            cout<<c<<endl;
-	        }
-	        
-	           
+	    else{
+	        cout<<"NO"<<endl;
 	    }
-	    else if(c>a&&c>b){
-	        if(a>b){
-	            cout<<a<<endl;
-	        }
-	        else{
-	            cout<<b<<endl;
-	        }
-	    }
-	    
 	}
 	return 0;
 }
