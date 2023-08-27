@@ -1,0 +1,22 @@
+#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void swap(string str1,string str2){
+    string temp;
+    temp=str1;
+    str1=str2;
+    str2=temp;
+    cout<<str1<<str2;
+}
+
+int main()
+{
+    string str1;
+    string str2;
+    cin>>str1>>str2;
+    swap(str1,str2);
+
+    return 0;
+}
