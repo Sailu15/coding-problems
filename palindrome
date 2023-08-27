@@ -1,0 +1,19 @@
+#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    string s;
+    cin>>s;
+    string r=string (s.rbegin(),s.rend());
+    if(s==r){
+        cout<<"palindrome"<<endl;
+    }
+    else{
+        cout<<"not a palindrome"<<endl;
+    }
+
+    return 0;
+}
